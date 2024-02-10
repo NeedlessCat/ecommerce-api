@@ -12,34 +12,34 @@ app.get("/", (req, res) => {
     .send({ message: "Welcome to EcommerceAPI", status: true });
 });
 
-const authRouters = require("./routes/auth.route.js");
+const authRouters = require("./src/routes/auth.route.js");
 app.use("/auth", authRouters);
 
-const userRouters = require("./routes/user.route.js");
+const userRouters = require("./src/routes/user.route.js");
 app.use("/api/users", userRouters);
 
-const productRouter = require("./routes/product.route");
+const productRouter = require("./src/routes/product.route.js");
 app.use("/api/products", productRouter);
 
-const adminProductRouter = require("./routes/adminProduct.route");
+const adminProductRouter = require("./src/routes/adminProduct.route.js");
 app.use("/api/admin/products", adminProductRouter);
 
-const cartRouter = require("./routes/cart.route");
+const cartRouter = require("./src/routes/cart.route.js");
 app.use("/api/cart", cartRouter);
 
-const cartItemRouter = require("./routes/cartItem.route");
+const cartItemRouter = require("./src/routes/cartItem.route.js");
 app.use("/api/cart_items", cartItemRouter);
 
-const orderRouter = require("./routes/order.route.js");
+const orderRouter = require("./src/routes/order.route.js");
 app.use("/api/orders", orderRouter);
 
-const adminOrderRouter = require("./routes/adminOrder.route");
+const adminOrderRouter = require("./src/routes/adminOrder.route.js");
 app.use("/api/admin/orders", adminOrderRouter);
 
-const reviewRouter = require("./routes/review.route");
+const reviewRouter = require("./src/routes/review.route.js");
 app.use("/api/reviews", reviewRouter);
 
-const ratingReview = require("./routes/rating.route");
+const ratingReview = require("./src/routes/rating.route.js");
 app.use("/api/ratings", ratingReview);
 
 module.exports = app;
